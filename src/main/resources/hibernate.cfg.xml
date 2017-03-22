@@ -13,7 +13,8 @@
         <property name="hbm2ddl.auto">create</property>
         <property name="show_sql">true</property>
 
-        <mapping class="kronos.Event"/>
+        <mapping class="kronos.Book"/>
+        <mapping class="kronos.Author"/>
 
     </session-factory>
 </hibernate-configuration>

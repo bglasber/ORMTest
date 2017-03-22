@@ -1,4 +1,5 @@
 package kronos;
+import java.util.List;
 
 /**
  * Hello world!
@@ -11,11 +12,21 @@ public class App
         ORMApi api = new ORMApi();
         try {
             api.setUp();
-            Event e = new Event("test");
+
+            Author auth = new Author("brad");
+            api.writeAuthor( auth );
+            Book b = new Book("test", auth);
             System.out.println("Going to write event");
-            api.writeEvent( e );
+            for( int i = 0; i < 5; i++ ) {
+                api.writeBook( b );
+            }
+
             System.out.println("wrote event");
+            List<Book> books = api.getAuthorOneBooks();
+
             api.tearDown();
+            System.out.println("finished teardown");
+
         } catch( Exception e ) {
             System.out.println( e.getMessage() );
         }

@@ -29,6 +29,8 @@
     <groupId>postgresql</groupId>
     <artifactId>postgresql</artifactId>
     <version>9.2-1002.jdbc4</version>
+ <!--   <scope>system</scope> -->
+<!--    <systemPath>${project.basedir}/src/main/resources/postgresql-9.2-1002.jdbc4.jar</systemPath> -->
 </dependency>
 
     <!-- slf4j-log4j -->
